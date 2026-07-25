@@ -2,8 +2,13 @@
 
 ## Requirements
 
-- Node.js 20+
-- npm 10+
+- Node.js 22+
+- npm 11+
+
+Validated locally on:
+
+- Node `v22.13.1`
+- npm `11.5.2`
 
 ## Install
 
@@ -11,7 +16,7 @@
 npm install
 ```
 
-## Local env
+## Local Env
 
 Create `.env.local`:
 
@@ -19,16 +24,21 @@ Create `.env.local`:
 NEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8787
 ```
 
+This value should point at the local `vivere-api` dev server.
+
 ## Run
 
 ```bash
 npm run dev
 ```
 
-## Build
+## Checks
 
 ```bash
+npm run typecheck
 npm run build
 ```
 
-Cloudflare Pages should publish the generated static output from `out/`.
+## Deployment Note
+
+This repo is configured for static export. Cloudflare Pages should publish the generated output from `out/`.

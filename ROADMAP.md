@@ -1,22 +1,29 @@
 # Frontend Roadmap
 
-## Phase 1
+## Now
 
 - PWA shell
 - landing flow
 - occasion cards
-- intake flow
-- plan preview UI
+- product-facing docs
 
-## Phase 2
+## Next
 
-- live plan status
-- edit and regenerate interactions
-- richer motion and transitions
-- install banner polish
+- occasion detail or intake entry screen
+- intake form state and validation
+- API wiring to fetch moments and submit plan requests
+- first plan preview screen
 
-## Phase 3
+## After That
+
+- plan editing and regeneration interactions
+- richer loading and empty states
+- live plan and execution status screens
+- install-banner polish and retained session recovery
+
+## Later
 
 - account-aware history
 - saved preferences
 - personalized resurfacing
+- finer occasion-specific UI treatment
