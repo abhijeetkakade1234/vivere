@@ -1,0 +1,17 @@
+{
+  "name": "Vivere",
+  "short_name": "Vivere",
+  "description": "Life happens. We will plan the rest.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#b14327",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
