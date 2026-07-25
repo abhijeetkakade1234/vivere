@@ -18,3 +18,18 @@ export type PlanStep = {
   estimatedCost?: number;
   executionStatus?: "pending" | "ready" | "running" | "done" | "failed";
 };
+
+export type Plan = {
+  id: string;
+  status: "planned";
+  request: ExperienceRequest;
+  summary: string;
+  plannerPromptVersion: string;
+  providerCandidates: string[];
+  timeline: PlanStep[];
+};
+
+export type ChatResponse = {
+  reply: string;
+  plan: Plan;
+};
