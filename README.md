@@ -4,6 +4,14 @@ Frontend repo for the Vivere PWA.
 
 Vivere is an experience-planning product. This repo owns the user-facing layer: landing, occasion selection, intake, plan rendering, installability, and frontend state. AI orchestration, provider integrations, and execution live in the separate `vivere-api` repo.
 
+## What Is Vivere
+
+Vivere is a planning product for real-life moments.
+
+Instead of asking the user to manually piece together dinner, gifts, flowers, reservations, or add-ons across multiple apps, Vivere starts with the occasion and builds a structured plan around it.
+
+The goal is simple: reduce decision fatigue and help someone go from "something is happening" to "the plan is handled."
+
 ## What This Repo Is For
 
 - Cloudflare Pages deployment target

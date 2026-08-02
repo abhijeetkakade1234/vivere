@@ -1,6 +1,5 @@
 "use client";
 
-import { OccasionCard } from "@/components/occasion-card";
 import { useInstallPrompt } from "@/hooks/use-install-prompt";
 import { APP_COPY, OCCASIONS } from "@/lib/app-config";
 
@@ -8,15 +7,19 @@ export default function HomePage() {
   const { canInstall, install } = useInstallPrompt();
 
   return (
-    <main className="shell">
-      <section className="hero">
+    <main className="landing-shell">
+      <section className="landing-hero">
         <p className="eyebrow">{APP_COPY.eyebrow}</p>
-        <h1>{APP_COPY.title}</h1>
-        <p className="lede">{APP_COPY.subtitle}</p>
+        <h1 className="landing-title">{APP_COPY.title}</h1>
+        <p className="landing-copy">{APP_COPY.subtitle}</p>
+        <p className="landing-copy">
+          Start at the landing page, step into login later, then enter the planner as a chat-style
+          app.
+        </p>
 
-        <div className="hero-actions">
-          <a className="primary-action" href="#moments">
-            Start with a moment
+        <div className="landing-actions">
+          <a className="primary-action" href="/login">
+            Start planning
           </a>
           {canInstall ? (
             <button className="secondary-action" onClick={install} type="button">
@@ -26,21 +29,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section aria-labelledby="moments-heading" className="moments" id="moments">
-        <div className="section-copy">
-          <p className="section-kicker">Occasions</p>
-          <h2 id="moments-heading">What is happening today?</h2>
-          <p>
-            The first build keeps the front door simple: pick a moment, answer a short intake, then
-            let the API turn it into a plan.
-          </p>
-        </div>
-
-        <div className="occasion-grid">
-          {OCCASIONS.map((occasion) => (
-            <OccasionCard key={occasion.slug} occasion={occasion} />
-          ))}
-        </div>
+      <section className="landing-grid">
+        {OCCASIONS.map((occasion) => (
+          <article key={occasion.slug} className="feature-card">
+            <p className="feature-index">{occasion.icon}</p>
+            <h2>{occasion.title}</h2>
+            <p>{occasion.description}</p>
+          </article>
+        ))}
       </section>
     </main>
   );

@@ -19,6 +19,18 @@ export type PlanStep = {
   executionStatus?: "pending" | "ready" | "running" | "done" | "failed";
 };
 
+export type PlanOptionProvider = "dineout" | "food" | "instamart";
+
+export type PlanOption = {
+  provider: PlanOptionProvider;
+  title: string;
+  subtitle?: string;
+  why?: string;
+  mustTry?: string[];
+  searchQuery?: string;
+  url?: string;
+};
+
 export type Plan = {
   id: string;
   status: "planned";
@@ -27,9 +39,27 @@ export type Plan = {
   plannerPromptVersion: string;
   providerCandidates: string[];
   timeline: PlanStep[];
+  options?: PlanOption[];
+  tips?: string[];
+};
+
+export type PullPlan = {
+  dineout?: string[];
+  food?: string[];
+  instamart?: string[];
+};
+
+export type ChatMode = "clarify" | "plan";
+
+export type ChatHistoryMessage = {
+  content: string;
+  role: "assistant" | "user";
 };
 
 export type ChatResponse = {
+  mode: ChatMode;
+  needFromUser?: string[];
+  plan?: Plan;
+  pullPlan?: PullPlan;
   reply: string;
-  plan: Plan;
 };

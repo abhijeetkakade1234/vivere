@@ -4,6 +4,11 @@ out
 .vercel
 .wrangler
 npm-debug.log*
+*.log
 .env*
 !.env.example
 *.tsbuildinfo
+*.key
+*.pem
+*.p12
+*.crt
